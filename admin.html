@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Cofi Tea Cack</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="Favicon Concept.png" type="image/png">
+    <style>
+        /* Override styles to ensure admin dashboard is always visible */
+        .admin-dashboard {
+            display: block !important;
+        }
+
+        .admin-dashboard.hidden {
+            display: block !important;
+        }
+
+        /* Hide the login panel completely */
+        .login-panel {
+            display: none !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="admin-container">
+        <!-- Admin Dashboard - Now visible by default -->
+        <div class="admin-dashboard" id="admin-dashboard">
+            <div class="admin-sidebar">
+                <div class="admin-logo">
+                    <h2>Cofi Tea Cack</h2>
+                    <p>Owner: Rubayet Ahmed Rony</p>
+                </div>
+
+                <nav class="admin-nav">
+                    <div class="night-mode-toggle">
+                        <i class="fas fa-moon"></i>
+                    </div>
+                    <ul>
+                        <li class="active" data-tab="dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</li>
+                        <li data-tab="products"><i class="fas fa-box"></i> Products</li>
+                        <li data-tab="add-product"><i class="fas fa-plus-circle"></i> Add Product</li>
+                        <li data-tab="orders"><i class="fas fa-shopping-cart"></i> Orders</li>
+                        <li data-tab="customers"><i class="fas fa-users"></i> Customers</li>
+                        <li data-tab="settings"><i class="fas fa-cog"></i> Settings</li>
+                    </ul>
+                </nav>
+
+                <div class="admin-logout">
+                    <a href="index.html" class="btn" style="text-decoration: none; color: white;">
+                        <i class="fas fa-home"></i> Back to Site
+                    </a>
+                </div>
+            </div>
+
+            <div class="admin-content">
+                <div class="admin-header">
+                    <div class="admin-search">
+                        <input type="text" placeholder="Search...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+
+                    <div class="admin-user">
+                        <span class="notification-badge"><i class="fas fa-bell"></i></span>
+                        <div class="user-info">
+                            <span>Rubayet Ahmed Rony</span>
+                            <img src="Admin Panel Icons.png" alt="Rubayet Ahmed Rony" class="user-avatar">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dashboard Tab -->
+                <div class="admin-tab active" id="dashboard-tab">
+                    <h2>Dashboard</h2>
+
+                    <div class="stat-cards">
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-shopping-bag"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>Total Products</h3>
+                                <p class="stat-number">24</p>
+                                <p class="stat-change positive">+2 this month</p>
+                            </div>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>Total Sales</h3>
+                                <p class="stat-number">$12,845</p>
+                                <p class="stat-change positive">+8% from last month</p>
+                            </div>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-user-plus"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>New Customers</h3>
+                                <p class="stat-number">48</p>
+                                <p class="stat-change positive">+12% from last month</p>
+                            </div>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-clipboard-list"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>Pending Orders</h3>
+                                <p class="stat-number">8</p>
+                                <p class="stat-change negative">-2 from yesterday</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="recent-activity">
+                        <h3>Recent Activity</h3>
+                        <div class="activity-list">
+                            <div class="activity-item">
+                                <div class="activity-icon order">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </div>
+                                <div class="activity-details">
+                                    <p class="activity-title">New Order #1089</p>
+                                    <p class="activity-desc">Customer: John Smith - $54.99</p>
+                                    <p class="activity-time">10 minutes ago</p>
+                                </div>
+                            </div>
+
+                            <div class="activity-item">
+                                <div class="activity-icon product">
+                                    <i class="fas fa-box"></i>
+                                </div>
+                                <div class="activity-details">
+                                    <p class="activity-title">Product Updated</p>
+                                    <p class="activity-desc">Mocha Tea Fizz - Stock updated to 125</p>
+                                    <p class="activity-time">1 hour ago</p>
+                                </div>
+                            </div>
+
+                            <div class="activity-item">
+                                <div class="activity-icon customer">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="activity-details">
+                                    <p class="activity-title">New Customer Registered</p>
+                                    <p class="activity-desc">Email: emma.davis@example.com</p>
+                                    <p class="activity-time">2 hours ago</p>
+                                </div>
+                            </div>
+
+                            <div class="activity-item">
+                                <div class="activity-icon order">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </div>
+                                <div class="activity-details">
+                                    <p class="activity-title">Order #1088 Shipped</p>
+                                    <p class="activity-desc">Tracking: USPS8261945</p>
+                                    <p class="activity-time">3 hours ago</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Products Tab -->
+                <div class="admin-tab" id="products-tab">
+                    <div class="tab-header">
+                        <h2>Manage Products</h2>
+                        <button class="btn btn-primary add-new-btn" data-tab="add-product">
+                            <i class="fas fa-plus"></i> Add New Product
+                        </button>
+                    </div>
+
+                    <div class="product-filters">
+                        <div class="filter-group">
+                            <label for="product-category">Category:</label>
+                            <select id="product-category">
+                                <option value="all">All Categories</option>
+                                <option value="tea">Tea Based</option>
+                                <option value="coffee">Coffee Based</option>
+                                <option value="cack">Cack (Cola)</option>
+                                <option value="limited">Limited Edition</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <label for="product-status">Status:</label>
+                            <select id="product-status">
+                                <option value="all">All Status</option>
+                                <option value="in-stock">In Stock</option>
+                                <option value="low-stock">Low Stock</option>
+                                <option value="out-of-stock">Out of Stock</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group search">
+                            <input type="text" placeholder="Search products...">
+                            <button><i class="fas fa-search"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="product-table-container">
+                        <table class="product-table">
+                            <thead>
+                                <tr>
+                                    <th>Image</th>
+                                    <th>Product Name</th>
+                                    <th>Category</th>
+                                    <th>Price</th>
+                                    <th>Stock</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><img src="Product Thumbnails.png" alt="Caramel Cack" class="product-thumbnail">
+                                    </td>
+                                    <td>Caramel Cack</td>
+                                    <td>Cack (Cola)</td>
+                                    <td>$4.99</td>
+                                    <td>156</td>
+                                    <td><span class="status in-stock">In Stock</span></td>
+                                    <td class="actions">
+                                        <button class="edit-btn" data-tooltip="Edit Product"><i
+                                                class="fas fa-edit"></i></button>
+                                        <button class="delete-btn" data-tooltip="Delete Product"><i
+                                                class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img src="Product Thumbnails.png" alt="Mocha Tea Fizz"
+                                            class="product-thumbnail"></td>
+                                    <td>Mocha Tea Fizz</td>
+                                    <td>Tea Based</td>
+                                    <td>$5.49</td>
+                                    <td>125</td>
+                                    <td><span class="status in-stock">In Stock</span></td>
+                                    <td class="actions">
+                                        <button class="edit-btn" data-tooltip="Edit Product"><i
+                                                class="fas fa-edit"></i></button>
+                                        <button class="delete-btn" data-tooltip="Delete Product"><i
+                                                class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img src="Product Thumbnails.png" alt="Spicy Chai Cack"
+                                            class="product-thumbnail"></td>
+                                    <td>Spicy Chai Cack</td>
+                                    <td>Cack (Cola)</td>
+                                    <td>$4.99</td>
+                                    <td>18</td>
+                                    <td><span class="status low-stock">Low Stock</span></td>
+                                    <td class="actions">
+                                        <button class="edit-btn" data-tooltip="Edit Product"><i
+                                                class="fas fa-edit"></i></button>
+                                        <button class="delete-btn" data-tooltip="Delete Product"><i
+                                                class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img src="Product Thumbnails.png" alt="Citrus Cofi" class="product-thumbnail">
+                                    </td>
+                                    <td>Citrus Cofi</td>
+                                    <td>Coffee Based</td>
+                                    <td>$5.29</td>
+                                    <td>0</td>
+                                    <td><span class="status out-of-stock">Out of Stock</span></td>
+                                    <td class="actions">
+                                        <button class="edit-btn" data-tooltip="Edit Product"><i
+                                                class="fas fa-edit"></i></button>
+                                        <button class="delete-btn" data-tooltip="Delete Product"><i
+                                                class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><img src="Product Thumbnails.png" alt="Maple Pecan Cofi"
+                                            class="product-thumbnail"></td>
+                                    <td>Maple Pecan Cofi</td>
+                                    <td>Limited Edition</td>
+                                    <td>$6.49</td>
+                                    <td>42</td>
+                                    <td><span class="status in-stock">In Stock</span></td>
+                                    <td class="actions">
+                                        <button class="edit-btn" data-tooltip="Edit Product"><i
+                                                class="fas fa-edit"></i></button>
+                                        <button class="delete-btn" data-tooltip="Delete Product"><i
+                                                class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="pagination">
+                        <button class="pagination-prev disabled"><i class="fas fa-chevron-left"></i></button>
+                        <div class="pagination-numbers">
+                            <span class="active">1</span>
+                            <span>2</span>
+                            <span>3</span>
+                        </div>
+                        <button class="pagination-next"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- Add Product Tab -->
+                <div class="admin-tab" id="add-product-tab">
+                    <h2>Add New Product</h2>
+                    <div class="edit-mode-indicator">
+                        You are editing an existing product. All changes will update the selected product.
+                    </div>
+
+                    <form class="product-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="product-name">Product Name*</label>
+                                <input type="text" id="product-name" name="product-name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="product-category-select">Category*</label>
+                                <select id="product-category-select" name="product-category" required>
+                                    <option value="">Select Category</option>
+                                    <option value="tea">Tea Based</option>
+                                    <option value="coffee">Coffee Based</option>
+                                    <option value="cack">Cack (Cola)</option>
+                                    <option value="limited">Limited Edition</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="product-price">Price ($)*</label>
+                                <input type="number" id="product-price" name="product-price" step="0.01" min="0"
+                                    required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="product-stock">Stock Quantity*</label>
+                                <input type="number" id="product-stock" name="product-stock" min="0" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="product-description">Product Description*</label>
+                            <textarea id="product-description" name="product-description" rows="4" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="product-ingredients">Ingredients</label>
+                            <textarea id="product-ingredients" name="product-ingredients" rows="3"></textarea>
+                            <p class="help-text">List each ingredient separated by commas</p>
+                        </div>
+
+                        <div class="form-group tags-group">
+                            <label>Product Tags</label>
+                            <div class="checkbox-group">
+                                <label><input type="checkbox" name="tags" value="vegan"> Vegan</label>
+                                <label><input type="checkbox" name="tags" value="sugar-free"> Sugar-Free</label>
+                                <label><input type="checkbox" name="tags" value="gluten-free"> Gluten-Free</label>
+                                <label><input type="checkbox" name="tags" value="caffeine-free"> Caffeine-Free</label>
+                                <label><input type="checkbox" name="tags" value="bestseller"> Best Seller</label>
+                                <label><input type="checkbox" name="tags" value="new"> New Arrival</label>
+                                <label><input type="checkbox" name="tags" value="limited"> Limited Edition</label>
+                                <label><input type="checkbox" name="tags" value="seasonal"> Seasonal</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="product-image">Product Images*</label>
+                            <div class="image-upload-area">
+                                <input type="file" id="product-image" name="product-image" multiple accept="image/*">
+                                <div class="upload-placeholder">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <p>Drag & drop images here or click to browse</p>
+                                    <p class="help-text">JPG, PNG or GIF format, max 5MB each</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="packaging-preview">
+                            <h3>Available Packaging Options:</h3>
+                            <img src="Product Packaging Variations.png" alt="Packaging options"
+                                style="max-width: 100%; height: auto; margin-top: 1rem;">
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="reset" class="btn btn-secondary">Clear Form</button>
+                            <button type="submit" class="btn btn-primary">Add Product</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Placeholder tabs with improved content -->
+                <div class="admin-tab" id="orders-tab">
+                    <h2>Orders Management</h2>
+                    <div class="placeholder-message">
+                        <i class="fas fa-shopping-cart"
+                            style="font-size: 2rem; margin-bottom: 15px; color: var(--primary-color);"></i>
+                        <h3>Orders Management Interface</h3>
+                        <p>This section will allow you to manage customer orders, process payments, and track shipments.
+                        </p>
+                        <p>Features will include order filtering, status updates, and shipping label generation.</p>
+                    </div>
+                </div>
+
+                <div class="admin-tab" id="customers-tab">
+                    <h2>Customer Management</h2>
+                    <div class="placeholder-message">
+                        <i class="fas fa-users"
+                            style="font-size: 2rem; margin-bottom: 15px; color: var(--primary-color);"></i>
+                        <h3>Customer Management Interface</h3>
+                        <p>This section will provide tools for managing customer accounts, viewing purchase history, and
+                            handling support requests.</p>
+                        <p>You'll be able to see detailed analytics about your customer base and implement loyalty
+                            programs.</p>
+                    </div>
+                </div>
+
+                <div class="admin-tab" id="settings-tab">
+                    <h2>Admin Settings</h2>
+                    <div class="placeholder-message">
+                        <i class="fas fa-cog"
+                            style="font-size: 2rem; margin-bottom: 15px; color: var(--primary-color);"></i>
+                        <h3>System Settings Interface</h3>
+                        <p>Configure your store settings, manage admin accounts, and customize the shopping experience.
+                        </p>
+                        <p>Settings include payment methods, shipping options, tax calculations, and notification
+                            preferences.</p>
+                        <div class="owner-info" style="margin-top: 20px; padding: 15px; border-top: 1px solid #eee;">
+                            <p><strong>Site Owner:</strong> Rubayet Ahmed Rony</p>
+                            <p><strong>Email:</strong> <a
+                                    href="mailto:rubayetahmedrony.acc18@gmail.com">rubayetahmedrony.acc18@gmail.com</a>
+                            </p>
+                            <p><strong>Last Updated:</strong> <span id="lastUpdated"></span></p>
+                            <script>
+                                document.getElementById('lastUpdated').textContent = new Date().toLocaleDateString();
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/admin.js"></script>
+    <script>
+        console.log('Admin panel directly accessible');
+
+        // Enhanced tab switching functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            // Enable direct access to add/edit product functionality
+            const addNewButtons = document.querySelectorAll('.add-new-btn');
+            addNewButtons.forEach(btn => {
+                btn.addEventListener('click', function () {
+                    const tabId = this.getAttribute('data-tab');
+                    if (tabId) {
+                        // Hide all tabs
+                        const tabs = document.querySelectorAll('.admin-tab');
+                        const tabLinks = document.querySelectorAll('.admin-nav li');
+
+                        tabs.forEach(tab => tab.classList.remove('active'));
+                        tabLinks.forEach(link => link.classList.remove('active'));
+
+                        // Show the add product tab
+                        document.getElementById(`${tabId}-tab`).classList.add('active');
+                        document.querySelector(`[data-tab="${tabId}"]`).classList.add('active');
+                    }
+                });
+            });
+
+            // Enable edit buttons functionality
+            const editButtons = document.querySelectorAll('.edit-btn');
+            editButtons.forEach(btn => {
+                btn.addEventListener('click', function () {
+                    // Switch to add-product tab (which will be used for editing)
+                    const tabs = document.querySelectorAll('.admin-tab');
+                    const tabLinks = document.querySelectorAll('.admin-nav li');
+
+                    tabs.forEach(tab => tab.classList.remove('active'));
+                    tabLinks.forEach(link => link.classList.remove('active'));
+
+                    // Show the add product tab
+                    document.getElementById('add-product-tab').classList.add('active');
+                    document.querySelector('[data-tab="add-product"]').classList.add('active');
+
+                    // Show edit mode indicator
+                    document.querySelector('.edit-mode-indicator').style.display = 'block';
+
+                    // Change button text
+                    const submitButton = document.querySelector('#add-product-tab .form-actions button[type="submit"]');
+                    if (submitButton) {
+                        submitButton.textContent = 'Update Product';
+                    }
+
+                    // You would normally populate the form with product data here
+                    // For this demo, we'll just change the form title
+                    const formTitle = document.querySelector('#add-product-tab h2');
+                    if (formTitle) {
+                        formTitle.textContent = 'Edit Product';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

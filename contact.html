@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Cofi Tea Cack</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="Favicon Concept.png" type="image/png">
+</head>
+
+<body style="background-image: url('Background Textures.png'); background-attachment: fixed; background-size: 100px;">
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>Cofi Tea Cack</h1>
+                </a>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav-icons">
+                <div class="night-mode-toggle">
+                    <i class="fas fa-moon"></i>
+                </div>
+                <a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Contact Hero Section -->
+        <section class="contact-hero">
+            <div class="contact-hero-content">
+                <h1>Get In Touch</h1>
+                <p>We'd love to hear from you! Whether you have a question, feedback, or want to collaborate, reach out
+                    to us.</p>
+            </div>
+        </section>
+
+        <!-- Contact Information -->
+        <section class="contact-info">
+            <h2>Get In Touch</h2>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-location-dot"></i>
+                    </div>
+                    <h3>Our Office</h3>
+                    <p>123 Beverage Blvd<br>Portland, OR 97204</p>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email Us</h3>
+                    <p>hello@cofiteacack.com<br>support@cofiteacack.com</p>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Call Us</h3>
+                    <p>(555) 123-4567<br>Mon-Fri 9am-5pm PST</p>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>Primary Contact</h3>
+                    <p>Rubayet Ahmed Rony<br>Chief Creative Officer<br>
+                        <a href="mailto:rubayetahmedrony.acc18@gmail.com">rubayetahmedrony.acc18@gmail.com</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map and Contact Form -->
+        <section class="contact-container">
+            <div class="map-container">
+                <h2>Find Our Flagship Store</h2>
+                <div class="map">
+                    <img src="Contact Page Map Illustration.png" alt="Map location" class="map-placeholder">
+                    <!-- In a real implementation, replace with: -->
+                    <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!..." width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+                </div>
+            </div>
+
+            <div class="contact-form-container">
+                <h2>Send Us a Message</h2>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <select id="subject" name="subject">
+                            <option value="general">General Inquiry</option>
+                            <option value="order">Order Question</option>
+                            <option value="wholesale">Wholesale Information</option>
+                            <option value="feedback">Product Feedback</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="newsletter" name="newsletter">
+                        <label for="newsletter">Subscribe to our newsletter</label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq">
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="accordion">
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h3>Do you ship internationally?</h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Yes! We ship to select countries worldwide. International shipping rates vary by location.
+                            Please allow 7-14 business days for international deliveries.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h3>Are your drinks suitable for people with dietary restrictions?</h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>We offer a range of options for different dietary needs! All our drinks are gluten-free, and
+                            we have several vegan and sugar-free options. Each product page lists all ingredients and
+                            dietary information.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h3>How long do your beverages stay fresh?</h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Our bottled drinks have a shelf life of 6 months when unopened. Once opened, we recommend
+                            consuming within 3-5 days for optimal flavor and keeping refrigerated.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h3>Do you offer wholesale options for cafes and stores?</h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Absolutely! We partner with cafes, restaurants, and specialty stores. Please email
+                            wholesale@cofiteacack.com for our wholesale catalog and pricing information.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>Cofi Tea Cack</h3>
+                <p>Artisanal soft drinks with a twist.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+                <div class="social-banner">
+                    <img src="Social Media Banners.png" alt="Follow us on social media">
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Shop</h4>
+                <ul>
+                    <li><a href="products.html">All Products</a></li>
+                    <li><a href="products.html?category=new">New Arrivals</a></li>
+                    <li><a href="products.html?category=bestsellers">Best Sellers</a></li>
+                    <li><a href="products.html?category=limited">Limited Editions</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="about.html">Our Story</a></li>
+                    <li><a href="about.html#sustainability">Sustainability</a></li>
+                    <li><a href="about.html#ingredients">Ingredients</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="mailto:rubayetahmedrony.acc18@gmail.com">Email the Designer</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Newsletter</h4>
+                <p>Stay updated on new flavors and promotions</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <div class="newsletter-preview">
+                    <img src="Email Newsletter Header.png" alt="Newsletter preview" width="200">
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Cofi Tea Cack. Created by Rubayet Ahmed Rony. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#" class="designer-credit">Designed by Rubayet Ahmed Rony</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="close-cart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items">
+            <!-- Cart items will be dynamically added here -->
+            <div class="empty-cart">Your cart is empty</div>
+        </div>
+        <div class="cart-total">
+            <p>Total: <span>$0.00</span></p>
+            <button class="btn btn-primary checkout-btn">Checkout</button>
+        </div>
+    </div>
+    <div class="cart-overlay"></div>
+
+    <!-- 404 Error Display (hidden by default) -->
+    <div class="error-container" style="display: none;">
+        <img src="404 Error Page Illustration.png" alt="Page not found">
+        <h2>Oops! Page not found</h2>
+        <p>The page you are looking for might have been removed or is temporarily unavailable.</p>
+        <a href="index.html" class="btn btn-primary">Back to Homepage</a>
+    </div>
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

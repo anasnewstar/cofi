@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cofi Tea Cack - Artisanal Soft Drinks</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="Favicon Concept.png" type="image/png">
+</head>
+
+<body style="background-image: url('Background Textures.png'); background-attachment: fixed; background-size: 100px;">
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>Cofi Tea Cack</h1>
+                </a>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav-icons">
+                <div class="night-mode-toggle">
+                    <i class="fas fa-moon"></i>
+                </div>
+                <a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Redefining Refreshment</h1>
+                <p>Artisanal coffee-infused teas and spiced beverages for the adventurous palate</p>
+                <div class="hero-cta">
+                    <a href="products.html" class="btn btn-primary">Shop Now</a>
+                    <a href="#flavors" class="btn btn-secondary">Explore Flavors</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="Hero Banner.png" alt="Cofi Tea Cack Hero Banner">
+                <div class="image-overlay"></div>
+            </div>
+        </section>
+
+        <!-- Flavor Showcase -->
+        <section id="flavors" class="flavors">
+            <h2>Our Signature Flavors</h2>
+            <div class="flavor-carousel">
+                <div class="flavor-card">
+                    <div class="flavor-image">
+                        <img src="LifestyleUsage Shots.png" alt="Caramel Cack">
+                    </div>
+                    <div class="flavor-info">
+                        <h3>Caramel Cack</h3>
+                        <p class="price">$4.99</p>
+                        <div class="flavor-notes">
+                            <span>Caramel</span>
+                            <span>Vanilla</span>
+                            <span>Cinnamon</span>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="flavor-card">
+                    <div class="flavor-image">
+                        <img src="Product Thumbnails.png" alt="Mocha Tea Fizz">
+                    </div>
+                    <div class="flavor-info">
+                        <h3>Mocha Tea Fizz</h3>
+                        <p class="price">$5.49</p>
+                        <div class="flavor-notes">
+                            <span>Coffee</span>
+                            <span>Chocolate</span>
+                            <span>Mint</span>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="flavor-card">
+                    <div class="flavor-image">
+                        <img src="Product Packaging Variations.png" alt="Spicy Chai Cack">
+                    </div>
+                    <div class="flavor-info">
+                        <h3>Spicy Chai Cack</h3>
+                        <p class="price">$4.99</p>
+                        <div class="flavor-notes">
+                            <span>Cardamom</span>
+                            <span>Ginger</span>
+                            <span>Clove</span>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="flavor-card">
+                    <div class="flavor-image">
+                        <img src="Ingredient Close-Ups.png" alt="Citrus Cofi">
+                    </div>
+                    <div class="flavor-info">
+                        <h3>Citrus Cofi</h3>
+                        <p class="price">$5.29</p>
+                        <div class="flavor-notes">
+                            <span>Lemon</span>
+                            <span>Orange</span>
+                            <span>Espresso</span>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="flavor-controls">
+                <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+                <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+
+        <!-- Featured Section -->
+        <section class="featured">
+            <div class="featured-content">
+                <h2>Limited Editions</h2>
+                <p>Seasonal flavors crafted with rare ingredients</p>
+                <a href="products.html?category=limited" class="btn btn-accent">Discover Now</a>
+            </div>
+            <div class="featured-image">
+                <img src="Seasonal Promotions Banner.png" alt="Limited Edition Drinks">
+            </div>
+        </section>
+
+        <!-- Flavor Inspiration -->
+        <section class="flavor-inspiration">
+            <h2>Our Flavor Inspiration</h2>
+            <div class="inspiration-content">
+                <p>Discover the stories behind our unique flavor combinations</p>
+                <img src="Flavor Inspiration Graphics.png" alt="Flavor Inspiration" class="full-width-image">
+                <div class="brewing-process">
+                    <h3>Our Brewing Process</h3>
+                    <div class="process-icons">
+                        <img src="Brewing Process Icons.png" alt="Brewing Process">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials">
+            <h2>What Our Customers Say</h2>
+            <div class="testimonial-container">
+                <div class="testimonial">
+                    <div class="quote">"The Mocha Tea Fizz is unlike anything I've ever tasted. It's now my go-to
+                        afternoon pick-me-up!"</div>
+                    <div class="author">- Sarah L.</div>
+                </div>
+                <div class="testimonial">
+                    <div class="quote">"Spicy Chai Cack has the perfect balance of spice and sweetness. I'm officially
+                        hooked."</div>
+                    <div class="author">- Marcus T.</div>
+                </div>
+                <div class="testimonial">
+                    <div class="quote">"These drinks make excellent mixers for cocktails too! The Citrus Cofi with vodka
+                        is my party trick."</div>
+                    <div class="author">- Jamie K.</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>Cofi Tea Cack</h3>
+                <p>Artisanal soft drinks with a twist.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+                <div class="social-banner">
+                    <img src="Social Media Banners.png" alt="Follow us on social media">
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Shop</h4>
+                <ul>
+                    <li><a href="products.html">All Products</a></li>
+                    <li><a href="products.html?category=new">New Arrivals</a></li>
+                    <li><a href="products.html?category=bestsellers">Best Sellers</a></li>
+                    <li><a href="products.html?category=limited">Limited Editions</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="about.html">Our Story</a></li>
+                    <li><a href="about.html#sustainability">Sustainability</a></li>
+                    <li><a href="about.html#ingredients">Ingredients</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="mailto:rubayetahmedrony.acc18@gmail.com">Email the Designer</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Newsletter</h4>
+                <p>Stay updated on new flavors and promotions</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <div class="newsletter-preview">
+                    <img src="Email Newsletter Header.png" alt="Newsletter preview" width="200">
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Cofi Tea Cack. Created by Rubayet Ahmed Rony. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#" class="designer-credit">Designed by Rubayet Ahmed Rony</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="close-cart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items">
+            <!-- Cart items will be dynamically added here -->
+            <div class="empty-cart">Your cart is empty</div>
+        </div>
+        <div class="cart-total">
+            <p>Total: <span>$0.00</span></p>
+            <button class="btn btn-primary checkout-btn">Checkout</button>
+        </div>
+    </div>
+    <div class="cart-overlay"></div>
+
+    <!-- Loading Animation (hidden by default) -->
+    <div class="loading-overlay" style="display: none;">
+        <img src="Loading Animation Asset.png" alt="Loading..." class="loading-animation">
+    </div>
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

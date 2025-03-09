@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Cofi Tea Cack</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="Favicon Concept.png" type="image/png">
+</head>
+
+<body style="background-image: url('Background Textures.png'); background-attachment: fixed; background-size: 100px;">
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>Cofi Tea Cack</h1>
+                </a>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html" class="active">Products</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav-icons">
+                <div class="night-mode-toggle">
+                    <i class="fas fa-moon"></i>
+                </div>
+                <a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="products-hero"
+            style="background-image: url('Seasonal Promotions Banner.png'); background-size: cover; background-position: center; color: white; text-shadow: 0 0 10px rgba(0,0,0,0.5);">
+            <div class="products-hero-content">
+                <h1>Our Collection</h1>
+                <p>Explore our unique range of artisanal soft drinks</p>
+            </div>
+        </section>
+
+        <section class="products-container">
+            <div class="filter-sidebar">
+                <h3>Filter By</h3>
+
+                <div class="filter-group">
+                    <h4>Flavor Profile</h4>
+                    <div class="filter-options">
+                        <label><input type="checkbox" data-filter="flavor" value="sweet"> Sweet</label>
+                        <label><input type="checkbox" data-filter="flavor" value="spicy"> Spicy</label>
+                        <label><input type="checkbox" data-filter="flavor" value="citrusy"> Citrusy</label>
+                        <label><input type="checkbox" data-filter="flavor" value="bitter"> Bitter</label>
+                        <label><input type="checkbox" data-filter="flavor" value="herbal"> Herbal</label>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Dietary</h4>
+                    <div class="filter-options">
+                        <label><input type="checkbox" data-filter="dietary" value="vegan"> Vegan</label>
+                        <label><input type="checkbox" data-filter="dietary" value="sugar-free"> Sugar-Free</label>
+                        <label><input type="checkbox" data-filter="dietary" value="gluten-free"> Gluten-Free</label>
+                        <label><input type="checkbox" data-filter="dietary" value="caffeine-free"> Caffeine-Free</label>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Collections</h4>
+                    <div class="filter-options">
+                        <label><input type="checkbox" data-filter="collection" value="bestseller"> Best Sellers</label>
+                        <label><input type="checkbox" data-filter="collection" value="new"> New Arrivals</label>
+                        <label><input type="checkbox" data-filter="collection" value="limited"> Limited Editions</label>
+                        <label><input type="checkbox" data-filter="collection" value="seasonal"> Seasonal</label>
+                    </div>
+                </div>
+
+                <button class="btn btn-secondary reset-filters">Reset Filters</button>
+            </div>
+
+            <div class="products-grid">
+                <div class="sort-options">
+                    <label for="sort-select">Sort by:</label>
+                    <select id="sort-select">
+                        <option value="featured">Featured</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="name-asc">Name: A to Z</option>
+                        <option value="name-desc">Name: Z to A</option>
+                    </select>
+                </div>
+
+                <div class="products-list">
+                    <!-- Product items will be dynamically generated here with JavaScript -->
+                </div>
+
+                <div class="pagination">
+                    <button class="pagination-prev disabled"><i class="fas fa-chevron-left"></i></button>
+                    <span class="pagination-info">Page <span class="current-page">1</span> of <span
+                            class="total-pages">1</span></span>
+                    <button class="pagination-next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Packaging -->
+        <section class="packaging-section">
+            <h2>Sustainable Packaging</h2>
+            <p>Our commitment to the environment extends to our packaging</p>
+            <img src="Product Packaging Variations.png" alt="Product Packaging Options" class="full-width-image">
+            <div class="packaging-credit">
+                <p>Product design by Rubayet Ahmed Rony</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>Cofi Tea Cack</h3>
+                <p>Artisanal soft drinks with a twist.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+                <div class="social-banner">
+                    <img src="Social Media Banners.png" alt="Follow us on social media">
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Shop</h4>
+                <ul>
+                    <li><a href="products.html">All Products</a></li>
+                    <li><a href="products.html?category=new">New Arrivals</a></li>
+                    <li><a href="products.html?category=bestsellers">Best Sellers</a></li>
+                    <li><a href="products.html?category=limited">Limited Editions</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="about.html">Our Story</a></li>
+                    <li><a href="about.html#sustainability">Sustainability</a></li>
+                    <li><a href="about.html#ingredients">Ingredients</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="mailto:rubayetahmedrony.acc18@gmail.com">Email the Designer</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Newsletter</h4>
+                <p>Stay updated on new flavors and promotions</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <div class="newsletter-preview">
+                    <img src="Email Newsletter Header.png" alt="Newsletter preview" width="200">
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Cofi Tea Cack. Created by Rubayet Ahmed Rony. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#" class="designer-credit">Designed by Rubayet Ahmed Rony</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="close-cart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items">
+            <!-- Cart items will be dynamically added here -->
+            <div class="empty-cart">Your cart is empty</div>
+        </div>
+        <div class="cart-total">
+            <p>Total: <span>$0.00</span></p>
+            <button class="btn btn-primary checkout-btn">Checkout</button>
+        </div>
+    </div>
+    <div class="cart-overlay"></div>
+
+    <!-- Product Template (Hidden) -->
+    <template id="product-template">
+        <div class="product-card" data-id="">
+            <div class="product-badge"></div>
+            <div class="product-image">
+                <img src="" alt="">
+            </div>
+            <div class="product-info">
+                <h3 class="product-title"></h3>
+                <p class="product-price"></p>
+                <div class="product-tags"></div>
+                <p class="product-description"></p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </template>
+
+    <script src="./js/products.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
